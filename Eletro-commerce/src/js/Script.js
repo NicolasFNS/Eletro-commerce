@@ -37,3 +37,15 @@ function update(){
     sliderTrocaImagem()
 }
 let intervalo = setInterval(update, 4000)
+
+let btnLogin = document.querySelector(".login")
+
+btnLogin.addEventListener("click", ()=>{
+    Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your work has been saved",
+        showConfirmButton: false,
+        timer: 1500
+      });
+})
