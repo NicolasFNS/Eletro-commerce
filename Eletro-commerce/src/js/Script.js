@@ -20,20 +20,20 @@ function sliderTrocaInput(){
 }
 
 function sliderTrocaImagem(){
-    let imagem1 = document.querySelector(".image1")
+    let slider = document.querySelector(".slider")
 
     if(sliderRadio1.checked){
-        imagem1.style.marginLeft = "0"
+        slider.style.marginLeft = "0"
     }
     else if(sliderRadio2.checked){
-        imagem1.style.marginLeft = "-100%"
+        slider.style.marginLeft = "-100%"
     }
     else if(sliderRadio3.checked){
-        imagem1.style.marginLeft = "-200%"
+        slider.style.marginLeft = "-200%"
     }
 }
 function update(){
     sliderTrocaInput()
     sliderTrocaImagem()
 }
-let intervalo = setInterval(update, 1000)
+let intervalo = setInterval(update, 4000)

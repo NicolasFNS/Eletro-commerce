@@ -7,8 +7,8 @@
 }
 
 :root{
-    --corPrincipal:rgb(255, 136, 0);
-    --corPrincipalHover: rgb(245, 131, 0);
+    --corPrincipal:rgb(218, 118, 5);
+    --corPrincipalHover: rgb(182, 99, 5);
     --fundoBlack: #282727;
 }
 
@@ -64,14 +64,41 @@ header .slider{
     width: 300%;
     height: 500px;
     display: flex;
+    transition: 0.9s;
 }
 header .slider input[type="radio"]{
     display: none;
 }
 header .slider div{
     width: 100%;
+    
 }
 header .slider div img{
     width: 100%;
     height: 100%;
+}
+header .catalogo{
+    background-color: var(--corPrincipal);
+}
+.catalogo ul{
+    display: flex;
+    justify-content: center;
+    background-color: var(--corPrincipal);
+    display: flex;
+    width: 100%;
+}
+.catalogo ul li{
+    cursor: pointer;
+    padding: 10px;
+    background-color: var(--corPrincipal);
+    color: white;
+    font-weight: bold;
+    list-style-type: none;
+    border: 1px solid var(--corPrincipalHover);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.catalogo ul li:hover{
+    background-color: var(--corPrincipalHover);
 }
