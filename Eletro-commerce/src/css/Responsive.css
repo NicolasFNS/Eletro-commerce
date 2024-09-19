@@ -16,4 +16,12 @@
         display: block;
         margin: 0px 20px 0px;
     }
+
+    header .catalogo{
+        display: none;
+    }
+
+    header .slider{
+        height: 300px;
+    }
 }
