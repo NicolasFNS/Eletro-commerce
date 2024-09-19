@@ -1,7 +1,6 @@
 *{
     margin: 0;  
     padding: 0;
-    background-color: var(--fundoBlack);
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
@@ -12,6 +11,9 @@
     --fundoBlack: #282727;
 }
 
+body{
+    background-color: var(--fundoBlack);
+}
 header{
     overflow: hidden;
 }
@@ -101,4 +103,12 @@ header .catalogo{
 }
 .catalogo ul li:hover{
     background-color: var(--corPrincipalHover);
+}
+.popup-login{
+    background-color: var(--fundoBlack);
+    color: white;
+}
+
+.popup-login button{
+    background-color: var(--corPrincipal);
 }
