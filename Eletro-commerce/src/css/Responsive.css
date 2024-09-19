@@ -1,0 +1,19 @@
+@media screen  and (max-width: 767px){
+    header .login{
+        display: none;
+    }
+    header nav{
+        justify-content: space-between;
+    }
+    nav img{
+        width: 100px;
+        margin: 0px 10px 0px;
+    }
+    header .pesquisa-header input,.buscar{
+        display: none;
+    }
+    nav .menu{
+        display: block;
+        margin: 0px 20px 0px;
+    }
+}
