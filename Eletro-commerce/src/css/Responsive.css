@@ -24,4 +24,21 @@
     header .slider{
         height: 300px;
     }
+
+    footer .informacoes{
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    footer .informacoes div p{
+        margin: 20px 10px 20px;
+        font-size: 10px;
+    }
+    footer .informacoes h3{
+        font-size: 13px;
+    }
+    footer .diretrizes{
+        padding: 30px 5px 30px;
+    }
 }
