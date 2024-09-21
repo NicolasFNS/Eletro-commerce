@@ -22,14 +22,29 @@ btnLogin.addEventListener("click", () => {
         let password = document.getElementById("password").value
 
         if(userEmail == "" || userPassword == ""){
-            Swal.fire("Erro ao Logar");    
+            Swal.fire({
+                title: "Campos vazios",
+                customClass: {
+                    popup: 'popup-login'
+                }
+            })    
         }else{
             if(email == userEmail && password == userPassword){
-                Swal.fire("Logado!");
+                Swal.fire({
+                    title: "Logado",
+                    customClass: {
+                        popup: 'popup-login'
+                    }
+                })
                 btnLogin.textContent = "Logado"
                 btnLogin.disabled = true
             }else{
-                Swal.fire("Erro ao logar")
+                Swal.fire({
+                    title: "Erro ao logar",
+                    customClass: {
+                        popup: 'popup-login'
+                    }
+                })
             }
         }
         
@@ -52,14 +67,29 @@ btnLogin.addEventListener("click", () => {
                 userPassword = document.getElementById("password").value
 
                 if(userEmail == "" || userPassword == ""){
-                    Swal.fire("Erro ao Cadastrar");    
+                    Swal.fire({
+                        title: "Campos vazios",
+                        customClass: {
+                            popup: 'popup-login'
+                        }
+                    })    
                 }else{
-                    Swal.fire("Cadastrado!");
+                    Swal.fire({
+                        title: "Cadastrado",
+                        customClass: {
+                            popup: 'popup-login'
+                        }
+                    })
                     
                 }
                 
             }else if(result.isDenied){
-                Swal.fire("Cancelado!")
+                Swal.fire({
+                    title: "Cancelado",
+                    customClass: {
+                        popup: 'popup-login'
+                    }
+                })
             }
         })
     }
