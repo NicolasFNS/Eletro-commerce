@@ -38,3 +38,17 @@ function update(){
 }
 let intervalo = setInterval(update, 4000)
 
+let btn_menu = document.querySelector(".btn-menu")
+let menu = document.querySelector(".menu")
+
+btn_menu.addEventListener("click", () => {
+    if (menu.style.display === "none" || menu.style.display === "") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+});
+
+let sair_menu = document.querySelector(".sair-menu").addEventListener("click", ()=>{
+    menu.style.display = "none"
+})

@@ -12,7 +12,7 @@
     header .pesquisa-header input,.buscar{
         display: none;
     }
-    nav .menu{
+    nav .btn-menu{
         display: block;
         margin: 0px 20px 0px;
     }
