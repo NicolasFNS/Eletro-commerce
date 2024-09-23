@@ -52,3 +52,12 @@ btn_menu.addEventListener("click", () => {
 let sair_menu = document.querySelector(".sair-menu").addEventListener("click", ()=>{
     menu.style.display = "none"
 })
+
+let pesquisa = document.querySelector(".pesquisa")
+let busca = document.querySelector(".buscar")
+let valorPesquisa = ""
+
+busca.addEventListener("click", ()=>{
+    valorPesquisa = pesquisa.value
+    pesquisa.value = ""
+})
