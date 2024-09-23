@@ -1,97 +1,104 @@
 let userEmail = ""
 let userPassword = ""
 
-let btnLogin = document.querySelector(".login");
+let btnLogin = document.querySelectorAll("#login");
 
-btnLogin.addEventListener("click", () => {
-  Swal.fire({
-    title: "Login",
-    html: `
-      <input type="text" id="email" class="swal2-input" placeholder="Email">
-      <input type="password" id="password" class="swal2-input" placeholder="Senha">
-    `,
-    showDenyButton: true,
-    confirmButtonText: "Entrar",
-    denyButtonText: "Não cadastrado",
-    customClass: {
-      popup: 'popup-login'
-    }
-  }).then((result) => {
-    if (result.isConfirmed){  
-        let email = document.getElementById("email").value
-        let password = document.getElementById("password").value
-
-        if(userEmail == "" || userPassword == ""){
-            Swal.fire({
-                title: "Campos vazios",
-                customClass: {
-                    popup: 'popup-login'
-                }
-            })    
-        }else{
-            if(email == userEmail && password == userPassword){
-                Swal.fire({
-                    title: "Logado",
-                    customClass: {
-                        popup: 'popup-login'
-                    }
-                })
-                btnLogin.textContent = "Logado"
-                btnLogin.disabled = true
-            }else{
-                Swal.fire({
-                    title: "Erro ao logar",
-                    customClass: {
-                        popup: 'popup-login'
-                    }
-                })
-            }
-        }
-        
-    }else if (result.isDenied){
+btnLogin.forEach(element => {
+    element.addEventListener("click", ()=>{
         Swal.fire({
-            title: "Sign-up",
+            title: "Login",
             html: `
-            <input type="text" id="email" class="swal2-input" placeholder="Email">
-            <input type="password" id="password" class="swal2-input" placeholder="Senha">
+              <div class="conteiner-input">  
+              <input type="text" id="email" class="swal2-input" placeholder="Email">
+              <input type="password" id="password" class="swal2-input" placeholder="Senha">
+              </div>
             `,
             showDenyButton: true,
-            confirmButtonText: "Salvar",
-            denyButtonText: "cancelar",
+            confirmButtonText: "Entrar",
+            denyButtonText: "Não cadastrado",
             customClass: {
-            popup: 'popup-login'
+              popup: 'popup-login'
             }
-        }).then((result) => {
-            if(result.isConfirmed){
-                userEmail = document.getElementById("email").value
-                userPassword = document.getElementById("password").value
-
+          }).then((result) => {
+            if (result.isConfirmed){  
+                let email = document.getElementById("email").value
+                let password = document.getElementById("password").value
+        
                 if(userEmail == "" || userPassword == ""){
                     Swal.fire({
-                        title: "Campos vazios",
+                        title: "Erro ao logar",
                         customClass: {
                             popup: 'popup-login'
                         }
                     })    
                 }else{
-                    Swal.fire({
-                        title: "Cadastrado",
-                        customClass: {
-                            popup: 'popup-login'
-                        }
-                    })
-                    
+                    if(email == userEmail && password == userPassword){
+                        Swal.fire({
+                            title: "Logado",
+                            customClass: {
+                                popup: 'popup-login'
+                            }
+                        })
+                        btnLogin.textContent = "Logado"
+                        btnLogin.disabled = true
+                    }else{
+                        Swal.fire({
+                            title: "Erro ao logar",
+                            customClass: {
+                                popup: 'popup-login'
+                            }
+                        })
+                    }
                 }
                 
-            }else if(result.isDenied){
+            }else if (result.isDenied){
                 Swal.fire({
-                    title: "Cancelado",
+                    title: "Sign-up",
+                    html: `
+                    <div class="conteiner-input">  
+                    <input type="text" id="email" class="swal2-input" placeholder="Email">
+                    <input type="password" id="password" class="swal2-input" placeholder="Senha">
+                    </div>
+                    `,
+                    showDenyButton: true,
+                    confirmButtonText: "Salvar",
+                    denyButtonText: "cancelar",
                     customClass: {
-                        popup: 'popup-login'
+                    popup: 'popup-login'
+                    }
+                }).then((result) => {
+                    if(result.isConfirmed){
+                        userEmail = document.getElementById("email").value
+                        userPassword = document.getElementById("password").value
+        
+                        if(userEmail == "" || userPassword == ""){
+                            Swal.fire({
+                                title: "Campos vazios",
+                                customClass: {
+                                    popup: 'popup-login'
+                                }
+                            })    
+                        }else{
+                            Swal.fire({
+                                title: "Cadastrado",
+                                customClass: {
+                                    popup: 'popup-login'
+                                }
+                            })
+                            
+                        }
+                        
+                    }else if(result.isDenied){
+                        Swal.fire({
+                            title: "Cancelado",
+                            customClass: {
+                                popup: 'popup-login'
+                            }
+                        })
                     }
                 })
             }
-        })
-    }
-  });
+          });
+    })
 });
+

@@ -19,10 +19,11 @@ header{
 }
 header nav{
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
 }
-nav img{
+
+nav .logo img{
     width: 140px;
 }
 
@@ -149,40 +150,4 @@ footer .diretrizes{
     color: white;
     font-size: 10px;
     padding: 20px 100px 20px;
-}
-
-.menu{
-    transition: 0.9s;
-    display: none;
-    position: absolute;
-    background-color: #1a1919;
-    width: 65%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    color: white;
-}
-.menu .topo-menu{
-    padding: 10px 20px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.menu .topo-menu img{
-    width: 90px;
-}
-.menu .topo-menu .sair-menu{
-    font-weight: bold;
-    cursor: pointer;
-}
-.menu .informacoes-menu{
-    padding: 10px;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-.menu .informacoes-menu p{
-    cursor: pointer;
 }

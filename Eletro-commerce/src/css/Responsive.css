@@ -1,20 +1,66 @@
+header nav .login-mobile{
+    display: none;
+    cursor: pointer;
+}
+.menu{
+    transition: 0.9s;
+    display: none;
+    position: absolute;
+    background-color: #1a1919;
+    width: 65%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    color: white;
+}
+.menu .topo-menu{
+    padding: 10px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu .topo-menu img{
+    width: 90px;
+}
+.menu .topo-menu .sair-menu{
+    font-weight: bold;
+    cursor: pointer;
+}
+.menu .informacoes-menu{
+    padding: 10px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu .informacoes-menu p{
+    cursor: pointer;
+}
+
 @media screen  and (max-width: 767px){
     header .login{
         display: none;
     }
-    header nav{
-        justify-content: space-between;
-    }
-    nav img{
-        width: 100px;
+    header nav .login-mobile{
+        display: block;
+        width: 30px;
         margin: 0px 10px 0px;
+    }
+    nav .logo{
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+    }
+    nav .logo img{    
+        width: 100px;
     }
     header .pesquisa-header input,.buscar{
         display: none;
     }
     nav .btn-menu{
         display: block;
-        margin: 0px 20px 0px;
+        margin: 0px 10px 0px;
     }
 
     header .catalogo{
@@ -40,5 +86,17 @@
     }
     footer .diretrizes{
         padding: 30px 5px 30px;
+    }
+
+    .conteiner-input{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .swal2-input{
+        max-width: 100%;
+        width: auto;
     }
 }
