@@ -151,3 +151,159 @@ footer .diretrizes{
     font-size: 10px;
     padding: 20px 100px 20px;
 }
+
+h1 {
+    color: #ff6600;
+  }
+
+/* seção dos colaboradores */
+.card-box-colabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.card-colab {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.card-colab:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(255, 102, 0, 0.7);
+}
+
+.card-colab img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+}
+
+.card-colab h2 {
+    color: #ff6600;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.card-colab p {
+    color: #aaa;
+    font-size: 16px;
+    margin-bottom: auto;
+}
+
+.cards h2 {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    color: white;
+}
+
+/* seção dos produtos */
+
+.catalogo-produtos {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff6600;
+    color: #aaa;
+    border-radius: 8px;
+    margin: 40px auto 20px; 
+    max-width: 1200px;
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.4);
+}
+
+.catalogo-produtos h2 {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.card-box-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.card-produto {
+    background-color: #1a1a1a;
+    color: #aaa;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 102, 0, 0.7);
+}
+
+.card-produto img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+}
+
+.card-produto h1 {
+    font-size: 20px;
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+.card-produto p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+#produtos .button {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #ff6600;
+}
+
+#produtos .button:hover {
+    background-color: #f09c63;
+}
+
+
+/* seção do mapa */
+.map {
+    width: 100%;
+    height: 240px;
+    max-width: 768px;
+    height: 350px;
+    background-color: #333;
+    border: 2px solid #ff6600;
+    border-radius: 12px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map:hover {
+    transform: scale(0.98);
+}
