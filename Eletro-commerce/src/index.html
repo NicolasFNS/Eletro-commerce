@@ -10,35 +10,18 @@
     <script src="js/Script.js" defer></script>
     <script src="js/Login.js" defer></script>
     <link  rel="icon" type="image/png" href="images/eletrocommerce-logo.png">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 </head>
 <body>
-    <section class="menu">
-        <div class="topo-menu">
-            <img src="images/eletrocommerce-logo.png" alt="">
-            <p class="sair-menu">X</p>
-        </div>
-        <div class="informacoes-menu">
-            <p>CUPONS</p>
-            <p>MONTE SEU PC</p>
-            <p>OFERTAS</p>
-            <p>KITS</p>
-            <p>LOJAS OFICIAIS</p>
-            <p>HARDWARES</p>
-            <p>COMPUTADORES</p>
-            <p>PERIFERICOS</p>
-        </div>
-    </section>
     <header>
         <nav>
-            <p class="btn-menu">&#9776;</p>
-            <div class="logo">
-                <img src="images/eletrocommerce-logo.png" alt="">
-            </div>
+            <img  src="images/eletrocommerce-logo.png" alt="">
             <div class="pesquisa-header">
-                <input class="pesquisa" type="text" placeholder="Pesquisar"><button class="buscar">Buscar</button></input>
+                <input type="text" placeholder="Pesquisar"><button class="buscar">Buscar</button></input>
             </div>
-            <button id="login" class="login">Login</button>
-            <img id="login" class="login-mobile" src="images/icon-login.png" alt="">
+            <button class="login">Login</button>
+            <p class="menu">&#9776;</p>
         </nav>
         <section class="catalogo">
             <ul>
@@ -60,8 +43,8 @@
             <div class="image2"><img src="images/slide2.jpg" alt=""></div>
             <div class="image3"><img src="images/slide3.jpg" alt=""></div>
         </section>
+
     </header>
-    
     <main>
         <section class=" cards ">
             <section class="catalogo-produtos">
@@ -81,7 +64,7 @@
             <div id="map" class ="map"></div>    
         </section>
     </main>
-
+    
     <footer>
         <div class="informacoes">
             <div>
