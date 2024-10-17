@@ -19,11 +19,10 @@ header{
 }
 header nav{
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
 }
-
-nav .logo img{
+nav img{
     width: 140px;
 }
 
@@ -63,8 +62,7 @@ nav .login:hover{
     background-color: var(--corPrincipalHover);
     transition: 0.2s;
 }
-nav .btn-menu{
-    cursor: pointer;
+nav .menu{
     color: white;
     font-size: 25px;
     display: none;
