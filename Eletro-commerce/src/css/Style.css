@@ -19,10 +19,11 @@ header{
 }
 header nav{
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
 }
-nav img{
+
+nav .logo img{
     width: 140px;
 }
 
@@ -62,7 +63,8 @@ nav .login:hover{
     background-color: var(--corPrincipalHover);
     transition: 0.2s;
 }
-nav .menu{
+nav .btn-menu{
+    cursor: pointer;
     color: white;
     font-size: 25px;
     display: none;
@@ -78,7 +80,7 @@ header .slider input[type="radio"]{
 }
 header .slider div{
     width: 100%;
-    
+
 }
 header .slider div img{
     width: 100%;
@@ -132,7 +134,7 @@ footer .informacoes{
     align-items: center;
 }
 footer .informacoes div{
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
