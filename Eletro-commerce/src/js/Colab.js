@@ -1,17 +1,17 @@
 //colaboradores
 const colabs = [
     {
-        nome: "Eletro",
-        descricao: "Smartphone com tela de 6.5 polegadas e câmera de 48MP.",
-        imagem: "./images/eletrocommerce-logo.png"
+        nome: "Sample Games",
+        descricao: "Desenvolvimento de jogos.",
+        imagem: "./images/sample.png"
     },
     {
-        nome: "Eletro",
-        descricao: "Notebook com processador Intel i7 e 16GB RAM.",
-        imagem: "./images/eletrocommerce-logo.png"
+        nome: "Tião Cervejas",
+        descricao: "Malte de qualidade.",
+        imagem: "./images/tiao.png"
     },
     {
-        nome: "moldsoft",
+        nome: "Moldsoft Tecnologia",
         descricao: "Acessoria e tecnologia.",
         imagem: "./images/logo-moldsoft-site-b.png"
     }
