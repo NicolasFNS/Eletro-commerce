@@ -126,6 +126,17 @@ header nav h1 {
     color: var(--corPrincipal);
 }
 
+.info-adicional .button {
+    color: white;
+    padding: 10px 20px;
+    background-color: var(--corPrincipal);
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     /* Reduz tamanho dos textos */

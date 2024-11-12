@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eletro-commerce</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/Responsive.css">
+    <script src="js/Script.js" defer></script>
+    <script src="js/Login.js" defer></script>
+    <script src="js/Mapa.js" defer></script>
+    <script src="js/Produto.js" defer></script>
+    <script src="js/Colab.js" defer></script>
+    <link  rel="icon" type="image/png" href="images/eletrocommerce-logo.png">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+</head>
+<body>
+    <section class="menu">
+        <div class="topo-menu">
+            <img src="images/eletrocommerce-logo.png" alt="">
+            <p class="sair-menu">X</p>
+        </div>
+        <div class="informacoes-menu">
+            <p>CUPONS</p>
+            <p>MONTE SEU PC</p>
+            <p>OFERTAS</p>
+            <p>KITS</p>
+            <p>LOJAS OFICIAIS</p>
+            <p>HARDWARES</p>
+            <p>COMPUTADORES</p>
+            <p>PERIFERICOS</p>
+        </div>
+    </section>
+    <header>
+        <nav>
+            <p class="btn-menu">&#9776;</p>
+            <div class="logo">
+                <img src="images/eletrocommerce-logo.png" alt="">
+            </div>
+            <div class="pesquisa-header">
+                <input class="pesquisa" type="text" placeholder="Pesquisar"><button class="buscar">Buscar</button></input>
+            </div>
+            <button id="login" class="login">Login</button>
+            <img id="login" class="login-mobile" src="images/icon-login.png" alt="">
+        </nav>
+        <section class="catalogo">
+            <ul>
+                <li>CUPONS</li>
+                <li>MONTE SEU PC</li>
+                <li>OFERTAS</li>
+                <li>KITS</li>
+                <li>LOJAS OFICIAIS</li>
+                <li>HARDWARES</li>
+                <li>COMPUTADORES</li>
+                <li>PERIFERICOS</li>
+            </ul>
+        </section>
+        <section class="slider">
+            <input type="radio" id="radio1">
+            <input type="radio" id="radio2">
+            <input type="radio" id="radio3">
+            <div class="image1"><img src="images/slide1.jpg" alt=""></div>
+            <div class="image2"><img src="images/slide2.jpg" alt=""></div>
+            <div class="image3"><img src="images/slide3.jpg" alt=""></div>
+        </section>
+    </header>
+    <main>
+        <section class=" cards ">
+            <section class="catalogo-produtos">
+                <h2>Catálogo de Produtos</h2>
+
+            <section id="produtos" class="card-box-produtos"></section>
+
+            </section>
+        </section>
+
+        <section class=" cards ">
+            <h2>Colaboradores</h2>
+            <section id="colabs" class="card-box-colabs"></section>
+        </section>
+            
+        <section class="mapa">    
+            <div id="map" class ="map"></div>    
+        </section>
+    </main>
+    
+    <footer>
+        <div class="informacoes">
+            <div>
+                <h3>Departamentos</h3>
+                <p>Hardware</p>
+                <p>Celulares</p>
+                <p>Cupons</p>
+                <p>Computadores</p>
+                <p>Perifericos</p>
+                <p>Consoles e games</p>
+                <p>Segurança</p>
+                <p>devoluções</p>
+            </div>
+            <div>
+                <h3>Novidades</h3>
+                <p>Black friday</p>
+                <p>Oferta do dia</p>
+                <p>Gits cards</p>
+                <p>Tecnologias</p>
+                <p>Monte seu pc</p>
+                <p>Regulamentos</p>
+                <p>Parcerias</p>
+                <p>Pix</p>
+            </div>
+            <div>
+                <h3>Acessibilidade</h3>
+                <p>acessibilidade</p>
+                <p>minha conta</p>
+                <p>minhas compras</p>
+                <p>Trocar senha</p>
+                <p>Logar de outro dispositivo</p>
+                <p>Referencias</p>
+                <p>Lojas</p>
+                <p>Retirar na loja</p>
+            </div>
+            <div>
+                <h3>Suporte</h3>
+                <p>Segunda 07:00 as 21:00</p>
+                <p>Terça 07:00 as 21:00</p>
+                <p>Quarta 07:00 as 21:00</p>
+                <p>Quinta 07:00 as 21:00</p>
+                <p>Sexta 07:00 as 21:00</p>
+                <p>Sabado 07:00 as 21:00</p>
+                <p>Domingo 07:00 as 21:00</p>
+                <p>feriados 07:00 as 21:00</p>    
+            </div>
+        </div>
+        <div class="diretrizes">
+            <p> Eletro-commerce® é uma marca registrada de Eletro-commerce | CNPJ: 00.000.000/0001-00 | Todos os direitos reservados. Os preços anunciados neste site ou via e-mail promocional podem ser alterados sem prévio aviso. O Eletro-commerce! não é responsável por erros descritivos. As fotos contidas nesta página são meramente ilustrativas do produto e podem variar de acordo com o fornecedor/lote do fabricante. Este site trabalha 100% em criptografia SSL.  Clique aqui e veja as políticas de nossa empresa.</p>
+        </div>
+    </footer>
+</body>
+</html>
