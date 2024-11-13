@@ -19,10 +19,11 @@ header{
 }
 header nav{
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
 }
-nav img{
+
+nav .logo img{
     width: 140px;
 }
 
@@ -62,7 +63,8 @@ nav .login:hover{
     background-color: var(--corPrincipalHover);
     transition: 0.2s;
 }
-nav .menu{
+nav .btn-menu{
+    cursor: pointer;
     color: white;
     font-size: 25px;
     display: none;
@@ -78,7 +80,7 @@ header .slider input[type="radio"]{
 }
 header .slider div{
     width: 100%;
-    
+
 }
 header .slider div img{
     width: 100%;
@@ -132,7 +134,7 @@ footer .informacoes{
     align-items: center;
 }
 footer .informacoes div{
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -157,21 +159,20 @@ h1 {
 /* seção dos colaboradores */
 .card-box-colabs {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px;
-    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .card-colab {
     background-color: #1a1a1a;
     padding: 20px;
     border-radius: 10px;
-    width: 280px;
+    width: 28%;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
 }
 
 .card-colab:hover {
@@ -203,7 +204,7 @@ h1 {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin: 0;
-    color: white;
+    color: #aaa;
 }
 
 /* seção dos produtos */
@@ -211,12 +212,12 @@ h1 {
 .catalogo-produtos {
     text-align: center;
     padding: 20px;
-    background-color: #ff6600;
+    background-color: #4f4f4f;
     color: #aaa;
     border-radius: 8px;
     margin: 40px auto 20px; 
-    max-width: 1200px;
-    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.4);
+    max-width: 90%;
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.7)
 }
 
 .catalogo-produtos h2 {
@@ -236,7 +237,7 @@ h1 {
     background-color: #333;
     border-radius: 12px;
     margin: 40px auto;
-    max-width: 1200px;
+    max-width: 87%;
 }
 
 .card-produto {
@@ -291,9 +292,8 @@ h1 {
 /* seção do mapa */
 .map {
     width: 100%;
-    height: 240px;
-    max-width: 768px;
-    height: 350px;
+    max-width: 90%;
+    height: 400px;
     background-color: #333;
     border: 2px solid #ff6600;
     border-radius: 12px;
