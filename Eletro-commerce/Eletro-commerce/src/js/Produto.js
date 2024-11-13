@@ -1,24 +1,35 @@
-const produtoSelecionado = JSON.parse(localStorage.getItem('produtoSelecionado'));
+async function exibirProdutos() {
+    const produtoCards = document.getElementById('produtos');
+    
+    try {
+        const response = await fetch('./php/produtos.php');
+        const produtos = await response.json();
 
-function exibirDetalhesProduto() {
-    const produtoDetalhes = document.getElementById('produto-detalhes');
+        produtos.forEach(produto => {
+            const card = document.createElement('section');
+            card.className = 'card-produto';
+            card.innerHTML = `
+                <img src="${ produto.imagem }" alt="${ produto.nome }">
+                <h1>${ produto.nome }</h1>
+                <p>Preço: R$ ${ produto.preco }</p>
+                <p>${ produto.descricao }</p>
+                <a href="#" class="button">Comprar</a>
+            `;
 
-    if (!produtoSelecionado) {
-        alert('Nenhum produto encontrado!');
-        window.location.href = 'index.html';
-        return;
+            const button = card.querySelector('.button');
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                
+                localStorage.setItem('produtoSelecionado', JSON.stringify(produto));
+                
+                window.location.href = 'produto.html';
+            });
+
+            produtoCards.appendChild(card);
+        });
+    } catch (error) {
+        console.error("Erro ao carregar produtos:", error);
     }
-
-    const detalhesHTML = `
-        <img src="${ produtoSelecionado.imagem }" alt="${ produtoSelecionado.nome }">
-        <h1>${ produtoSelecionado.nome }</h1>
-        <p>Preço: R$ ${ produtoSelecionado.preco.toFixed(2) }</p>
-        <p>${ produtoSelecionado.descricao }</p>
-        <a href="index.html" class="button">Voltar</a>
-    `;
-
-    produtoDetalhes.innerHTML = detalhesHTML;
 }
 
-document.addEventListener('DOMContentLoaded', exibirDetalhesProduto);
-
+document.addEventListener('DOMContentLoaded', exibirProdutos);
