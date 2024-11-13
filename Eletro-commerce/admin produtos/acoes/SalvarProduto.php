@@ -1,14 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "produtosDB";
-
-$conn = new mysqli($servername, $username, $password);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require("conecta.php");
 
 $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 if ($conn->query($sql) !== TRUE) {
@@ -32,7 +23,7 @@ if ($conn->query($sql) !== TRUE) {
     die("Erro criando tabela: " . $conn->error);
 }
 
-$targetDir = "./images/";
+$targetDir = "../../Eletro-commerce/src/images/";
 
 if (!is_dir($targetDir)) {
     if (!mkdir($targetDir, 0777, true)) {
@@ -79,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($stmt->execute()) {
                 echo "Produto adicionado com sucesso.";
-                header("Location: adicionarProduto.html");
+                header("Location: index.php");
                 exit();
             } else {
                 echo "Erro ao adicionar produto: " . $stmt->error;

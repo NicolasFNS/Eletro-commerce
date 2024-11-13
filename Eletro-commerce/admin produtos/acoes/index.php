@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Produto</title>
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
     <h1>Adicionar Novo Produto</h1>
-    <form action="./SalvarProduto.php" method="POST" enctype="multipart/form-data">
+    <form class="form" action="./SalvarProduto.php" method="POST" enctype="multipart/form-data">
         <label>Nome:</label>
         <input type="text" name="nome" required><br>
 
@@ -30,5 +30,20 @@
 
         <button type="submit">Salvar Produto</button>
     </form>
+
+    <table>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <?php include("ListarProduto.php"); ?>
+        </tr>
+    </table>
+    
+    
 </body>
 </html>
