@@ -45,36 +45,34 @@ function exibirDetalhesProduto() {
     `;
 
     produtoDetalhes.innerHTML = detalhesHTML;
+
+    document.getElementById("contactForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+    
+        const compradorMensagem = document.getElementById("compradorMensagem").value.trim();
+    
+        if ( compradorMensagem === "") {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        const emailData = {
+            vendedor_email: produtoSelecionado.email, 
+            comprador_email: userEmail,
+            produto_nome: produtoSelecionado.nome,
+            produto_preco: produtoSelecionado.preco,
+            mensagem: compradorMensagem,
+        };
+    
+        emailjs.send("service_r9hvoyu", "template_scl14kl", emailData)
+            .then(response => {
+                alert("Email enviado com sucesso!");
+            })
+            .catch(error => {
+                alert("Erro ao enviar o email: " + JSON.stringify(error));
+            });
+    });
     
 }
 
-document.getElementById("contactForm").addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const compradorMensagem = document.getElementById("compradorMensagem").value.trim();
-
-    if ( compradorMensagem === "") {
-        alert("Por favor, preencha todos os campos.");
-        return;
-    }
-
-    const emailData = {
-        vendedor_email: produtoSelecionado.email, 
-        comprador_email: userEmail,
-        produto_nome: produtoSelecionado.nome,
-        produto_preco: produtoSelecionado.preco,
-        mensagem: compradorMensagem,
-    };
-
-    emailjs.send("service_r9hvoyu", "template_scl14kl", emailData)
-        .then(response => {
-            alert("Email enviado com sucesso!");
-        })
-        .catch(error => {
-            alert("Erro ao enviar o email: " + JSON.stringify(error));
-        });
-});
-
 document.addEventListener('DOMContentLoaded', exibirDetalhesProduto);
-
-
