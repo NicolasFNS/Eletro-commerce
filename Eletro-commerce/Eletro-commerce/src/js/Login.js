@@ -9,7 +9,7 @@ btnLogin.forEach(element => {
             title: "Login",
             html: `
               <div class="conteiner-input">  
-              <input type="text" id="email" class="swal2-input" placeholder="Email">
+              <input type="text" id="email" class="swal2-input" name="email" placeholder="Email">
               <input type="password" id="password" class="swal2-input" placeholder="Senha">
               </div>
             `,
@@ -79,14 +79,15 @@ btnLogin.forEach(element => {
                                 }
                             })    
                         }else{
+                            localStorage.setItem('userEmail', JSON.stringify(userEmail));
                             Swal.fire({
                                 title: "Cadastrado",
                                 customClass: {
                                     popup: 'popup-login'
                                 }
-                            })
-                            
+                            });
                         }
+
                         
                     }else if(result.isDenied){
                         Swal.fire({
