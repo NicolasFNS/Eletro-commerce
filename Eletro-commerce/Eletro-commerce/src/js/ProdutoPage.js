@@ -77,3 +77,4 @@ document.getElementById("contactForm").addEventListener("submit", (event) => {
 
 document.addEventListener('DOMContentLoaded', exibirDetalhesProduto);
 
+
