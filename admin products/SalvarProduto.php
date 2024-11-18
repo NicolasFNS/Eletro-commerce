@@ -23,7 +23,7 @@ if ($conn->query($sql) !== TRUE) {
     die("Erro criando tabela: " . $conn->error);
 }
 
-$targetDir = "../../Eletro-commerce/src/images/";
+$targetDir = "../images/products/";
 
 if (!is_dir($targetDir)) {
     if (!mkdir($targetDir, 0777, true)) {

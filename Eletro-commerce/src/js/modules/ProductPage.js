@@ -19,7 +19,7 @@ function exibirDetalhesProduto() {
             <h1>${produtoSelecionado.nome}</h1>
             <p>Preço: R$ ${produtoSelecionado.preco}</p>
             <p>${produtoSelecionado.descricao}</p>
-            <a href="index.html" class="button">Volta</a>
+            <a href="index.html" class="button">Voltar</a>
         </section>
 
         <section class="info-adicional">

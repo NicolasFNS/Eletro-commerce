@@ -3,17 +3,17 @@ const colabs = [
     {
         nome: "Sample Games",
         descricao: "Desenvolvimento de jogos.",
-        imagem: "./images/sample.png"
+        imagem: "../images/logos/sample.png"
     },
     {
         nome: "Tião Cervejas",
         descricao: "Malte de qualidade.",
-        imagem: "./images/tiao.png"
+        imagem: "../images/logos/tiao.png"
     },
     {
         nome: "Moldsoft Tecnologia",
         descricao: "Acessoria e tecnologia.",
-        imagem: "./images/logo-moldsoft-site-b.png"
+        imagem: "../images/logos/logo-moldsoft-site-b.png"
     }
 ];
 

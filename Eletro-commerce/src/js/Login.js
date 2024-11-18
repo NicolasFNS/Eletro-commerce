@@ -33,12 +33,13 @@ btnLogin.forEach(element => {
                     })    
                 }else{
                     if(email == userEmail && password == userPassword){
+                        localStorage.setItem('userEmail', JSON.stringify(userEmail));
                         Swal.fire({
                             title: "Logado",
                             customClass: {
                                 popup: 'popup-login'
                             }
-                        })
+                        });
                         btnLogin.textContent = "Logado"
                         btnLogin.disabled = true
                     }else{
